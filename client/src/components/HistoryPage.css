@@ -1,0 +1,62 @@
+.history-page {
+    padding: 20px; /* Add some overall padding */
+  }
+  
+  .history-page h1 {
+    margin-bottom: 5px;
+  }
+  .history-page > p { /* Target the subtitle */
+    margin-bottom: 25px;
+    color: #666;
+  }
+  
+  .filters-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow filters to wrap on smaller screens */
+    gap: 15px; /* Space between filter controls */
+    padding: 15px;
+    background-color: #f8f9fa; /* Light background for filter area */
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+  
+  .filters-section .search-input {
+    flex-grow: 1; /* Allow search input to take more space */
+    min-width: 200px; /* Minimum width */
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .filters-section .date-input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 150px;
+  }
+  .filters-section .clear-filters-button {
+      padding: 8px 15px;
+      border: 1px solid #ccc;
+      background-color: #eee;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  .filters-section .clear-filters-button:hover {
+      background-color: #ddd;
+  }
+  
+  .transaction-list-container.history-list {
+    margin-top: 20px;
+  }
+  
+  .history-list h3 {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+  }
+  
+  /* Reuse TransactionItem.css styles by importing it in HistoryPage.js
+     or copy the relevant styles here */
+  @import './TransactionItem.css'; /* Example import */
+  
+  /* Add any additional specific styles for the history list if needed */

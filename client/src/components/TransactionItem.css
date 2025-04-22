@@ -1,0 +1,71 @@
+/* Remove default list styles if using <ul> */
+.transactions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .transaction-item {
+    display: flex; /* Arrange columns horizontally */
+    align-items: center; /* Vertically align items in the middle */
+    padding: 12px 8px; /* Adjust vertical and horizontal padding */
+    border-bottom: 1px solid #eee; /* Separator line */
+    gap: 10px; /* Space between columns */
+    font-size: 0.9em; /* Adjust base font size */
+  }
+  
+  .transaction-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Define columns */
+  .tx-col {
+    /* Default behavior for columns */
+    display: flex;
+    flex-direction: column; /* Stack desc/paid-by vertically */
+    justify-content: center;
+  }
+  
+  .tx-col-icon {
+    flex-basis: 30px; /* Fixed width for icon */
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 1.2em; /* Make icon slightly larger */
+  }
+  
+  .tx-col-desc {
+    flex-grow: 1; /* Allow description to take most space */
+    flex-basis: 30%; /* Suggest initial width */
+    min-width: 100px; /* Prevent it becoming too small */
+  }
+  
+  .tx-desc-main {
+    font-weight: 500; /* Make description slightly bolder */
+    color: #333;
+  }
+  
+  .tx-paid-by {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 2px;
+  }
+  
+  .tx-col-circle,
+  .tx-col-date,
+  .tx-col-category {
+    flex-basis: 15%; /* Suggest width */
+    flex-shrink: 0;
+    min-width: 80px; /* Prevent wrapping */
+    color: #555;
+    padding: 0 5px; /* Add some internal padding */
+  }
+  
+  .tx-col-amount {
+    flex-basis: 15%; /* Suggest width */
+    flex-shrink: 0;
+    min-width: 70px; /* Prevent wrapping */
+    font-weight: 500;
+    text-align: right; /* Right-align amount */
+    color: #333;
+    padding-right: 5px; /* Align with edge */
+  }

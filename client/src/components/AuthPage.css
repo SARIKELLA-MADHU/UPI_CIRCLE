@@ -1,0 +1,76 @@
+/* client/src/pages/AuthPage.css */
+.auth-container {
+    display: flex;
+    min-height: 100vh; /* Full viewport height */
+    font-family: sans-serif; /* Basic font */
+}
+
+.auth-form-area {
+    flex: 1; /* Adjust ratio as needed, e.g., flex: 0 0 40%; */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff; /* White background for form side */
+}
+
+.auth-logo {
+    margin-bottom: 30px;
+    /* Style your logo */
+}
+
+.auth-toggle {
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Rounded corners for the container */
+    overflow: hidden; /* Keep button backgrounds contained */
+    display: inline-flex; /* Make container fit content */
+}
+
+.auth-toggle button {
+    padding: 10px 25px;
+    border: none;
+    background-color: transparent; /* Default transparent */
+    cursor: pointer;
+    font-size: 1rem;
+    color: #555;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-toggle button.active {
+    background-color: #007bff; /* Example active color - match screenshot blue */
+    color: white;
+}
+
+.auth-info-area {
+    flex: 1; /* Adjust ratio as needed, e.g., flex: 1; */
+    background-color: #4a90e2; /* Example blue - match screenshot */
+    color: white;
+    padding: 60px 40px;
+    /* Add styling for text, list items, icons */
+}
+
+.auth-info-area h2 {
+    margin-bottom: 20px;
+}
+
+.auth-info-area p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.auth-info-area ul {
+    list-style: none;
+    padding: 0;
+}
+
+.auth-info-area li {
+    margin-bottom: 15px;
+}
+
+/* Add media queries for responsiveness if needed */
+@media (max-width: 768px) {
+    .auth-container {
+        flex-direction: column;
+    }
+}

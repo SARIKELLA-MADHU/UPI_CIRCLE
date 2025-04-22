@@ -1,0 +1,109 @@
+/* client/src/components/DashboardPage.css */
+
+/* --- Existing rule (keep as is, display:flex is fine) --- */
+.dashboard-container {
+  display: flex; /* Enables Flexbox */
+  min-height: 100vh; /* Make container at least full screen height */
+  position: relative; /* Added position relative just in case */
+}
+
+/* --- ADDED FOR STICKY SIDEBAR --- */
+.sidebar { /* Ensure Sidebar.js's outer element has className="sidebar" */
+  position: fixed;   /* Makes it stay in place relative to the viewport */
+  top: 0;
+  left: 0;
+  width: 250px;    /* --- ADJUST THIS WIDTH --- */
+  height: 100vh;   /* Full viewport height */
+  background-color: #f8f9fa; /* Example background - change if needed */
+  border-right: 1px solid #e0e0e0; /* Example border */
+  z-index: 100;   /* Keep it on top */
+  overflow-y: auto; /* Allows sidebar itself to scroll if needed */
+  /* Add styles from your Sidebar.css if they were meant for the container */
+}
+/* --- END OF ADDED SIDEBAR RULES --- */
+
+
+/* --- MODIFIED .dashboard-content rule --- */
+/* Styles for the main content area (to the right of the sidebar) */
+.dashboard-content {
+  flex-grow: 1; /* Allows this area to grow and take remaining space */
+  padding: 20px; /* Add some spacing inside the main area */
+  /* --- ADDED margin-left FOR STICKY SIDEBAR --- */
+  margin-left: 250px; /* --- ADJUST '250px' TO MATCH sidebar width --- */
+  /* Add background color, etc. as needed */
+}
+/* --- END OF MODIFIED CONTENT RULE --- */
+
+
+/* --- KEEP YOUR OTHER EXISTING RULES BELOW --- */
+
+.welcome-message {
+  margin-bottom: 30px;
+}
+.welcome-message h2 {
+    margin-bottom: 5px;
+}
+ .welcome-message p {
+    color: #555;
+}
+
+.action-cards-container {
+  display: grid; /* Use grid for easy card layout */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between cards */
+  margin-bottom: 40px;
+}
+
+.action-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.action-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-card h4 {
+  margin-top: 10px; /* Space if you add icons above */
+  margin-bottom: 0; /* Remove default margin if needed */
+}
+
+.dashboard-section {
+  margin-bottom: 40px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+ .section-header h3 {
+  margin: 0;
+}
+
+.view-all-link {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 0.9em;
+}
+
+/* You likely don't need this placeholder style anymore */
+/* .circle-card-placeholder { */
+/* border: 1px dashed #ccc; */
+/* padding: 15px; */
+/* margin-top: 10px; */
+/* background-color: #f9f9f9; */
+/* color: #777; */
+/* } */
+
+/* --- Remember to add styles for TransactionItem.css if needed --- */
+/* --- Or import TransactionItem.css in the component --- */

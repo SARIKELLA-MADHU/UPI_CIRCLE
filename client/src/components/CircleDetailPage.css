@@ -1,0 +1,16 @@
+/* client/src/components/CircleDetailPage.css */
+.circle-detail-page { padding: 20px; }
+.detail-header { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+.detail-header h1 { margin-bottom: 5px; }
+.detail-header p { margin-bottom: 10px; color: #555; }
+.balance-info { display: flex; gap: 20px; font-weight: bold; margin-top: 15px; }
+.detail-section { margin-bottom: 30px; }
+.detail-section h3 { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+.member-list { list-style: none; padding: 0; }
+.member-list li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dotted #eee; font-size: 0.95em; }
+.member-list li:last-child { border-bottom: none; }
+.member-name { font-weight: bold; }
+.member-upi { color: #777; }
+.add-member-form, .contribute-form { margin-top: 15px; display: flex; gap: 10px; align-items: center; }
+.add-member-form input, .contribute-form input { padding: 8px; border: 1px solid #ccc; border-radius: 4px; flex-grow: 1; }
+.add-member-form button, .contribute-form button { padding: 8px 15px; cursor: pointer; }

@@ -1,0 +1,91 @@
+/* client/src/components/modals/CreateCircleModal.css */
+/* Add to your modal CSS file */
+
+/* Style for side-by-side form groups */
+.form-row {
+  display: flex;
+  gap: 15px; /* Adjust spacing between fields */
+  align-items: flex-start; /* Align items at the top */
+}
+
+/* Make form groups within a row share space */
+.form-row .form-group {
+  flex: 1; /* Each takes equal space */
+  min-width: 0; /* Prevent overflow issues */
+}
+
+/* Ensure selects/inputs fill their container */
+.form-row .form-group select,
+.form-row .form-group input {
+   width: 100%;
+}
+
+/* Style for the green proceed button */
+ .proceed-button {
+   background-color: #28a745; /* Green */
+   color: white;
+   border: none;
+   /* Add other button styles from modal-actions button if needed */
+   padding: 10px 20px;
+   border-radius: 4px;
+   cursor: pointer;
+   font-weight: bold;
+ }
+ .proceed-button:disabled {
+   background-color: #94d3a2;
+   opacity: 0.7;
+   cursor: not-allowed;
+ }
+
+/* Ensure other modal styles are present */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); display: flex;
+    justify-content: center; align-items: center; z-index: 1000;
+  }
+  .modal-content {
+    background-color: #fff; padding: 30px; border-radius: 8px;
+    width: 90%; max-width: 500px; position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); max-height: 90vh;
+    overflow-y: auto;
+  }
+  .modal-close-button {
+    position: absolute; top: 10px; right: 10px; background: none;
+    border: none; font-size: 1.5rem; cursor: pointer; color: #aaa; line-height: 1;
+  }
+  .modal-close-button:hover { color: #333; }
+  .modal-content h3 { margin-top: 0; margin-bottom: 10px; text-align: center; }
+  .modal-content p { margin-bottom: 20px; text-align: center; color: #666; }
+  .modal-content .form-group { margin-bottom: 15px; }
+  .modal-content .form-group label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 0.9em; }
+  .modal-content .form-group input[type="text"],
+  .modal-content .form-group input[type="number"],
+  .modal-content .form-group textarea {
+    width: 100%; padding: 10px; border: 1px solid #ccc;
+    border-radius: 4px; box-sizing: border-box; font-size: 0.95em;
+  }
+  .modal-content .form-group textarea { min-height: 60px; resize: vertical; }
+  .add-member-input-group { display: flex; }
+  .add-member-input-group input { flex-grow: 1; margin-right: 5px; border-radius: 4px 0 0 4px; }
+  .add-member-input-group button { padding: 10px 15px; border: 1px solid #ccc; background-color: #eee; cursor: pointer; border-left: none; border-radius: 0 4px 4px 0; }
+  .add-member-input-group button:hover { background-color: #ddd; }
+  .added-members-list { list-style: none; padding: 0; margin-top: 10px; max-height: 100px; overflow-y: auto; border: 1px solid #eee; border-radius: 4px; font-size: 0.9em; }
+  .added-members-list li { display: flex; justify-content: space-between; align-items: center; padding: 5px 10px; border-bottom: 1px solid #eee; }
+  .added-members-list li:last-child { border-bottom: none; }
+  .added-members-list button { background: none; border: none; color: #dc3545; cursor: pointer; font-size: 1em; padding: 0 0 0 10px; }
+  .form-toggle { display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; }
+  .form-toggle label:first-child { margin-bottom: 0; margin-right: 10px; font-weight: bold; font-size: 0.9em;}
+  .switch { position: relative; display: inline-block; width: 50px; height: 24px; }
+  .switch input { opacity: 0; width: 0; height: 0; }
+  .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; }
+  .slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: white; transition: .4s; }
+  input:checked + .slider { background-color: #2196F3; }
+  input:checked + .slider:before { transform: translateX(26px); }
+  .slider.round { border-radius: 24px; }
+  .slider.round:before { border-radius: 50%; }
+  .modal-actions { display: flex; justify-content: flex-end; margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; }
+  .modal-actions button { padding: 10px 20px; border-radius: 4px; cursor: pointer; margin-left: 10px; border: none; font-weight: bold; }
+  .modal-actions button[type="button"] { background-color: #eee; color: #333; }
+  .modal-actions button[type="submit"] { background-color: #007bff; color: white; }
+  .modal-actions button:disabled { opacity: 0.6; cursor: not-allowed; }
+  .modal-content .form-message.error { color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; padding: 10px; border-radius: 4px; margin-bottom: 15px; text-align: center; font-size: 0.9em; }
